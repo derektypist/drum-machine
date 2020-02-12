@@ -60,3 +60,17 @@ pressing the W key should trigger the drum pad which contains the string "W", et
 
 When a .drum-pad is triggered, a string describing the associated 
 audio clip is displayed as the inner text of the #display element (each string must be unique).
+
+[Wireframes](wireframes/wireframe-drum-machine.png) are supplied.
+
+## Features
+
+Drum Machine has 9 keys.
+
+## Credits
+
+
+### Acknowledgements
+
+Steven Youhana in freecodecamp.org - Drum Machine Audio Element Forum.
+
