@@ -67,6 +67,8 @@ audio clip is displayed as the inner text of the #display element (each string m
 
 Drum Machine has 9 keys.
 
+## Technologies
+
 ## Credits
 
 
@@ -76,3 +78,16 @@ Steven Youhana in freecodecamp.org - Drum Machine Audio Element Forum.
 
 [Drum Machine Audio Element Forum](https://www.freecodecamp.org/forum/t/drum-machine-audio-element/210860) accessed
 on 12 February 2020.
+
+https://www.soundbible.com - Accessed 12 February 2020
+
+    Drum Roll Sounds at http://soundbible.com/716-Drum-Roll.html
+    Halogen Light at http://soundbible.com/1085-Halogen-Light.html
+    Sci-Fi Robot Sounds at http://soundbible.com/1317-Sci-Fi-Robot.html
+    City Centre Sounds at http://soundbible.com/2000-City-Centre.html
+    Service Bell Help Sounds at http://soundbible.com/2218-Service-Bell-Help.html
+    Pen Clicking Sounds at http://soundbible.com/835-Pen-Clicking.html
+    Public Transit Bus Sounds at http://soundbible.com/1698-Public-Transit-Bus.html
+    Party Horn Sounds at http://soundbible.com/1817-Party-Horn.html
+    Typewriter Sounds at http://soundbible.com/827-Typewriter.html
+    
