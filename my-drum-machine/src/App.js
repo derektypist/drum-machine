@@ -3,7 +3,7 @@ import React from 'react';
 
 /*
 SOURCES
-‘http://soundbible.com/2175-Street.html’
+‘http://soundbible.com/716-Drum-Roll.html’
 ‘http://soundbible.com/1085-Halogen-Light.html’
 ‘http://soundbible.com/1317-Sci-Fi-Robot.html’
 ‘http://soundbible.com/2000-City-Centre.html’
@@ -25,8 +25,10 @@ SOURCES
 Taken from Steven Youhana - Originally Accessed 12 February 2020
 */
 
+// Define Constant
+
 const SOUNDS = [
-  {Q: 'street-daniel_simon.mp3'},
+  {Q: 'Drum-Roll-SoundBible.com-1599301580.mp3'},
   {W: 'Halogen Light-SoundBible.com-1664817471.mp3'},
   {E: 'Sci-Fi-Robot-SoundBible.com-481033379.mp3'},
   {A: 'City_Centre-Hopeinawe-377331566.mp3'},
@@ -34,16 +36,25 @@ const SOUNDS = [
   {D: 'Pen-Clicking-SoundBible.com-482574858.mp3'},
   {Z: 'Public-Transit-Bus-SoundBible.com-671541921.mp3'},
   {X: 'party_horn-Mike_Koenig-76599891.mp3'},
-  {C: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3', KC: 67}
+  {C: 'Typewriter-SoundBible.com-285954942.mp3'}
 ];
 
-
-
-
+// Set Up Components
 
 class DrumMachine extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      display: "Novice Drummer",
+      padColor: 'lavender',
+      displayColor: 'lightgreen'
+    };
+    
+    this.toPlay = null;
+    this.playAudio = this.playAudio.bind(this);
+    this.setDisplay = this.setDisplay.bind(this);
+    this.build = null;
+    
     
     
     
