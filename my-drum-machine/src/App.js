@@ -176,7 +176,7 @@ class DrumMachine extends React.Component {
           <h2 className='text-center'>{this.state.display}</h2>
         </div> 
         <div id="view">
-          <div id='btn-group' className="text-center">
+          <div id="btn-group" className="text-center">
              {this.build}
           </div>
         </div>
@@ -207,5 +207,16 @@ class DrumPad extends React.Component {
   }
 }
 
+class Clip extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+    <audio className ="clip" id={this.props.giveID} src={this.props.source}>
+    </audio>
+    );
+    }
+  }
 
 export default DrumMachine;
