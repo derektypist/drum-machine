@@ -90,7 +90,7 @@ Any changes use the git push command.
 
 ### Content
 
-Written by me.
+Written by me, although other sources (e.g. React Components taken from Steven Youhana in freecodecamp.org) have been used.
 
 ### Media
 
