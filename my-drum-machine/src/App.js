@@ -112,6 +112,7 @@ class DrumMachine extends React.Component {
   }
 
   handleKey = (event) => {
+    // eslint-disable-next-line
     switch (event) {
       case SOUNDS[0]:
         this.toPlay = document.getElementById('Q');
@@ -208,6 +209,7 @@ class DrumPad extends React.Component {
 }
 
 class Clip extends React.Component {
+  // eslint-disable-next-line
   constructor(props) {
     super(props);
   }
