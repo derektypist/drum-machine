@@ -75,6 +75,16 @@ This project uses HTML5, CSS3, Bootstrap 4.4.1 and React.  Other Technologies in
 
 Ensure all user stories have been met.
 
+## Deployment
+
+This project is deployed on [GitHub Pages](https://derektypist.github.io/drum-machine)
+
+Remote set up at
+
+    git remote add origin https://github.com/derektypist/drum-machine
+    
+Any changes use the git push command.
+
 
 ## Credits
 
