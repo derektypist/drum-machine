@@ -36,7 +36,7 @@ class DrumMachine extends React.Component {
     super(props);
     this.state = {
       display: "Novice Drummer",
-      padColor: 'lavender',
+      padColor: 'yellow',
       displayColor: 'lightgreen'
     };
 
@@ -67,7 +67,7 @@ class DrumMachine extends React.Component {
       document.getElementById(hit).style.background = 'white';
     }
     setTimeout(() => {
-      document.getElementById(hit).style.background = 'lavender';
+      document.getElementById(hit).style.background = 'yellow';
     }, 200);
 
     let setIt = (theHit) => {
