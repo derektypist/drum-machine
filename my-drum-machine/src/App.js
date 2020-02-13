@@ -142,7 +142,11 @@ handleKey = (event) => {
     
   }
 
-
+ componentWillMount() {
+    this.build = SOUNDS.map( (e,i) => {
+      return  <DrumPad index={i} name={Object.keys(e)} playAudio={this.playAudio} src={e[Object.keys(e)]} color={this.state.padColor}/>;
+    });
+  }
 
   render() {
     return (
