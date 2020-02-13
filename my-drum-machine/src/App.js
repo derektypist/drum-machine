@@ -58,93 +58,113 @@ class DrumMachine extends React.Component {
     }
     this.setDisplay(parseInt(btn.target.id, 10));
   }
-  
-   setDisplay(hit) {
-    if(hit >= 0 && hit <= 8) {
-      let rgb = [Math.floor(Math.random()*254),Math.floor(Math.random()*254),Math.floor(Math.random()*254)];
+
+  setDisplay(hit) {
+    if (hit >= 0 && hit <= 8) {
+      let rgb = [Math.floor(Math.random() * 254), Math.floor(Math.random() * 254), Math.floor(Math.random() * 254)];
       document.getElementById("display").style.background = `rgb(${rgb[1]},${rgb[0]},${rgb[2]})`;
       document.getElementById("view").style.background = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
       document.getElementById(hit).style.background = 'white';
     }
-   setTimeout(()=> {
-        document.getElementById(hit).style.background = 'lavender';
-      },200);
-    
+    setTimeout(() => {
+      document.getElementById(hit).style.background = 'lavender';
+    }, 200);
+
     let setIt = (theHit) => {
       // console.log(theHit);
       this.setState({
         display: theHit
       });
     };
-    
-    switch(hit) {
-      case 0: setIt('Drum Roll'); break;
-      case 1: setIt('Halogen Light'); break;
-      case 2: setIt('Sci Fi Robot'); break;
-      case 3: setIt('City Centre'); break;
-      case 4: setIt('Service Bell'); break;
-      case 5: setIt('Pen Clicking'); break;
-      case 6: setIt('Public Transit Bus'); break;
-      case 7: setIt('Party Horn'); break;
-      case 8: setIt('Typewriter'); break;
-      default: setIt('You Rock!'); break;
+
+    switch (hit) {
+      case 0:
+        setIt('Drum Roll');
+        break;
+      case 1:
+        setIt('Halogen Light');
+        break;
+      case 2:
+        setIt('Sci Fi Robot');
+        break;
+      case 3:
+        setIt('City Centre');
+        break;
+      case 4:
+        setIt('Service Bell');
+        break;
+      case 5:
+        setIt('Pen Clicking');
+        break;
+      case 6:
+        setIt('Public Transit Bus');
+        break;
+      case 7:
+        setIt('Party Horn');
+        break;
+      case 8:
+        setIt('Typewriter');
+        break;
+      default:
+        setIt('You Rock!');
+        break;
     }
   }
 
-handleKey = (event) => {
-    switch(event) {
-      case SOUNDS[0]: 
-        this.toPlay = document.getElementById('Q');        
-        this.toPlay.play(); 
+  handleKey = (event) => {
+    switch (event) {
+      case SOUNDS[0]:
+        this.toPlay = document.getElementById('Q');
+        this.toPlay.play();
         this.setDisplay(0);
         break;
-      case SOUNDS[1]: 
+      case SOUNDS[1]:
         this.toPlay = document.getElementById('W');
         this.toPlay.play();
         this.setDisplay(1);
         break;
-      case SOUNDS[2]: 
+      case SOUNDS[2]:
         this.toPlay = document.getElementById('E');
         this.toPlay.play();
         this.setDisplay(2);
         break;
-      case SOUNDS[3]: 
+      case SOUNDS[3]:
         this.toPlay = document.getElementById('A');
-        this.toPlay.play(); 
+        this.toPlay.play();
         this.setDisplay(3);
         break;
-      case SOUNDS[4]: 
+      case SOUNDS[4]:
         this.toPlay = document.getElementById('S');
         this.toPlay.play();
         this.setDisplay(4);
         break;
-      case SOUNDS[5]: 
-        this.toPlay = document.getElementById('D'); 
+      case SOUNDS[5]:
+        this.toPlay = document.getElementById('D');
         this.toPlay.play();
         this.setDisplay(5);
         break;
-      case SOUNDS[6]: 
-        this.toPlay = document.getElementById('Z'); 
+      case SOUNDS[6]:
+        this.toPlay = document.getElementById('Z');
         this.toPlay.play();
         this.setDisplay(6);
         break;
-      case SOUNDS[7]: 
+      case SOUNDS[7]:
         this.toPlay = document.getElementById('X');
-        this.toPlay.play(); 
+        this.toPlay.play();
         this.setDisplay(7);
         break;
-      case SOUNDS[8]: 
-        this.toPlay = document.getElementById('C'); 
-        this.toPlay.play(); 
+      case SOUNDS[8]:
+        this.toPlay = document.getElementById('C');
+        this.toPlay.play();
         this.setDisplay(8);
         break;
     }
-    
+
   }
 
- componentWillMount() {
-    this.build = SOUNDS.map( (e,i) => {
-      return  <DrumPad index={i} name={Object.keys(e)} playAudio={this.playAudio} src={e[Object.keys(e)]} color={this.state.padColor}/>;
+  componentWillMount() {
+    this.build = SOUNDS.map((e, i) => {
+      return <DrumPad index={i} name={Object.keys(e)} playAudio={this.playAudio} src={e[Object.keys(e)]} color={this.state.padColor}/>;
     });
   }
 
@@ -164,4 +184,28 @@ handleKey = (event) => {
     );
   }
 }
+
+const Info = () => {
+  return (
+    <div id="nav" className="text-center"><h1>Drum Machine</h1></div>
+  );
+};
+
+class DrumPad extends React.Component {
+  constructor(props) {
+    super(props);
+    this.src = null;
+  }
+  render() {
+    return (
+      <div id={this.props.index} className="drum-pad" onClick={this.props.playAudio} 
+             style={{background: this.props.color}}>
+        {this.props.name}
+          <Clip className="clip" giveID={this.props.name} source={this.props.src}/>
+    </div>
+    );
+  }
+}
+
+
 export default DrumMachine;
