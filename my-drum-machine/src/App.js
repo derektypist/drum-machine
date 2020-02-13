@@ -49,10 +49,10 @@ class DrumMachine extends React.Component {
 
   playAudio(btn) {
     if (btn.target.id >= 0 && btn.target.id <= 8) {
-      this.toPlay = document.getElementById(Object.keys(SOUNDS[btn.target.id]));
+      this.toPlay = document.getElementById(Object.keys(SOUNDS[btn.target.id])[0]);
       this.toPlay.currentTime = 0;
       for (const e in SOUNDS) {
-        if (e === btn.target.id) this.url = SOUNDS[btn.target.id];
+        if (e === btn.target.id) this.url = SOUNDS[btn.target.id][Object.keys(SOUNDS[e])[0]];
         this.toPlay.play();
       }
     }
@@ -165,7 +165,7 @@ class DrumMachine extends React.Component {
 
   componentWillMount() {
     this.build = SOUNDS.map((e, i) => {
-      return <DrumPad index={i} name={Object.keys(e)} playAudio={this.playAudio} src={e[Object.keys(e)]} color={this.state.padColor}/>;
+      return <DrumPad index={i} name={Object.keys(e)[0]} playAudio={this.playAudio} src={e[Object.keys(e)[0]]} color={this.state.padColor}/>;
     });
   }
 
