@@ -150,21 +150,16 @@ handleKey = (event) => {
 
   render() {
     return (
-      <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="drum-machine" onClick={this.playAudio} onKeyDown={this.handleKey} tabIndex="0" >
+      <Info />
+        <div id="display">
+          <h2 className='text-center'>{this.state.display}</h2>
+        </div> 
+        <div id="view">
+          <div id='btn-group' className="text-center">
+             {this.build}
+          </div>
+        </div>
     </div>
     );
   }
