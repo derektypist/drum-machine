@@ -71,6 +71,11 @@ Drum Machine has 9 keys.
 
 This project uses HTML5, CSS3, Bootstrap 4.4.1 and React.  Other Technologies include Google Fonts and HTML5 Audio.
 
+## Testing
+
+Ensure all user stories have been met.
+
+
 ## Credits
 
 ### Content
