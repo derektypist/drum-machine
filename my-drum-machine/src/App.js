@@ -37,7 +37,7 @@ class DrumMachine extends React.Component {
     this.state = {
       display: "Novice Drummer",
       padColor: 'yellow',
-      displayColor: 'lightgreen'
+      displayColor: 'lime'
     };
 
     this.toPlay = null;
