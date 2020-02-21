@@ -5,37 +5,32 @@ https://codepen.io/freeCodeCamp/full/MJyNMd.
 
 ## UX
 
-There are 9 keys on the keyboard - Q, W, E, A, S, D, Z, X, C.
+There are 9 keys on the keyboard - Q, W, E, A, S, D, Z, X, C.  The display has an initial background
+colour of light blue and the view has a background color of lime.  The drum pad when active has a
+background color of yellow.  On clicking the drum pad, the background color is white.
 
-Power On Bank Off
------------------
+SOUNDS
+------
 
-On Load - Heater Kit
+* Q - 'Drum-Roll-SoundBible.com-1599301580.mp3'
+* W - 'Halogen Light-SoundBible.com-1664817471.mp3'
+* E: 'Sci-Fi-Robot-SoundBible.com-481033379.mp3'
+* A: 'City_Centre-Hopeinawe-377331566.mp3'
+* S: 'service-bell_daniel_simion.mp3'
+* D: 'Pen-Clicking-SoundBible.com-482574858.mp3'
+* Z: 'Public-Transit-Bus-SoundBible.com-671541921.mp3'
+* X: 'party_horn-Mike_Koenig-76599891.mp3'
+* C: 'Typewriter-SoundBible.com-285954942.mp3'
 
-* Q Pressed - Heater 1
-* W Pressed - Heater 2
-* E Pressed - Heater 3
-* A Pressed - Heater 4
-* S Pressed - Clap
-* D Pressed - Open HH
-* Z Pressed - Kick n' Hat
-* X Pressed - Kick
-* C Pressed - Closed HH
-
-Power On Bank On
+NAMES ON DISPLAY
 ----------------
 
-On Load - Smooth Piano Kit
+Initial State - Novice Drummer.
 
-* Q Pressed - Chord 1
-* W Pressed - Chord 2
-* E Pressed - Chord 3
-* A Pressed - Shaker
-* S Pressed - Open HH
-* D Pressed - Closed HH
-* Z Pressed - Punchy Kick
-* X Pressed - Side Stick
-* C Pressed - Snare
+Drum Roll, Halogen Light, Sci Fi Robot, City Centre, Service Bell, Pen Clicking,
+Public Transit Bus, Party Horn and Typewriter.  Otherwise it is You Rock.
+
+Q has index 0, W has index 1, E has index 2 and so on.
 
 ### User Stories
 
@@ -83,8 +78,7 @@ Remote set up at
 
     git remote add origin https://github.com/derektypist/drum-machine
     
-Any changes use the git push command.
-
+Use commands npm run build and npm run deploy to update any changes.
 
 ## Credits
 
